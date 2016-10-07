@@ -1,0 +1,17 @@
+---
+layout: post-layout
+title:  "Finished..."
+date:   2016-10-01 02:54:00 +0800
+categories: journal
+---
+At last... I finished setting up my personal blog on web development.
+
+But I have to sleep now...
+
+Tomorrow I'll write some essays about troubles I've encountered.
+
+Good Night...
+
+Ok, not tomorrow but today... So, happy National Day !
+
+Fine.

@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mckee's Footprints</title>
+    <description>ANDI_Mckee's Blog on WEB Development
+</description>
+    <link>https://andi-mckee.github.io//</link>
+    <atom:link href="https://andi-mckee.github.io//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 07 Oct 2016 09:30:48 +0800</pubDate>
+    <lastBuildDate>Fri, 07 Oct 2016 09:30:48 +0800</lastBuildDate>
+    <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Jekyll, HTML, and CSS</title>
+        <description>&lt;p&gt;Finally, all bugs were eliminated !!! Jesus !!! How can I make it ?&lt;/p&gt;
+
+&lt;p&gt;Now that the blog has been basically set up, I’ve got time to share how terrible these three days were. Haha, but I bet experience I got during days of suffering is absolutely more to say.&lt;/p&gt;
+
+&lt;p&gt;Thus, I’ll share my understanding, problems and their solutions with you. I hope that may be helpful. Let’s begin.&lt;/p&gt;
+
+&lt;h1 id=&quot;about-jekyll&quot;&gt;1.  About Jekyll&lt;/h1&gt;
+
+&lt;h3 id=&quot;first-of-all-what-is-jekyll-&quot;&gt;First of all, what is Jekyll ?&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;blockquote&gt;
+    &lt;p&gt;&lt;em&gt;&lt;a href=&quot;https://jekyllrb.com/&quot; title=&quot;More information about Jekyll&quot;&gt;&lt;strong&gt;Jekyll&lt;/strong&gt;&lt;/a&gt; is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter and our Liquid renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server.&lt;/em&gt;&lt;/p&gt;
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;As described above, Jekyll is a website generator which turns text and other files into a static web page.This engine is powerful and makes things easier.For purpose with low demand, such as A BLOG, we can use Jekyll. If so, not only do we have a easier way to write a blog post, but also there is no need to care about back-end.——&lt;strong&gt;” Cuz there is no database and other logical processes at all !!! “&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;amazing-but-how-could-&quot;&gt;Amazing, but, how could ?&lt;/h3&gt;
+&lt;p&gt;Jekyll uses three different modules to implement the conversion:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://yaml.org/&quot; title=&quot;More information about YAML&quot;&gt;&lt;strong&gt;YAML&lt;/strong&gt;&lt;/a&gt; – a human-readable data serialization language (like JASON).&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://shopify.github.io/liquid/&quot; title=&quot;More information about Liquid&quot;&gt;&lt;strong&gt;Liquid&lt;/strong&gt;&lt;/a&gt; – a template language used to load dynamic content for front-end.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://daringfireball.net/projects/markdown/&quot; title=&quot;More information about Markdown&quot;&gt;&lt;strong&gt;Markdown&lt;/strong&gt;&lt;/a&gt; (or Textile) – a human-friendly tool for more readable markup language (Remember, this tool uses its own grammar to convert your codes into html partials while it is &lt;em&gt;NOT&lt;/em&gt; a markup language).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Since these modules are assembled, Jekyll can present its magic. However, if you are attentive enough, you might find the magic could only be performed on small scale website, even except a blog that has a reply function.&lt;/p&gt;
+
+&lt;p&gt;YAML is for definition of files’ meta-information (which is called &lt;strong&gt;front matter&lt;/strong&gt;). Markdown is for you to write a more readable .md file to be converted into a html. It is often used for blog writing. Liquid is to add matters into files, which is more like a programming language with logical and control flow. These tools are easy to learn and supposed to be learned before using Jekyll of course.&lt;/p&gt;
+
+&lt;p&gt;With these tool, Jekyll converts your .md file or plain html with new thing added into a complete html. And it does this to css files too. Then it will link url to these finished products.&lt;/p&gt;
+
+&lt;p&gt;For example, before conversion, my first post on my blog is like this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;---
+layout: post-layout
+title:  &quot;My first post with jekyll&quot;
+date:   2016-09-30 08:06:54 +0800
+categories: website
+---
+This is my first blog on web development.
+
+And it is REALLY the first time that I have EVER tried jekyll.
+
+To be honest, the documentation of jekyll is just like SHIT. At first, I supposed it my weakness in English which made me confused for a long time. However, after I switched the doc page into a Chinese one, I can hardly understand how to go through EITHER!!!  
+
+Now I am still working on how to make it...
+
+Hope you guys follow me on [github](https://github.com/ANDI-Mckee &quot;ANDI-Mckee's Github&quot;).&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Plain enough, right ? Just like this, every time you request a page, Jekyll will generate html and css files every time you requested. Imagine this, if you were able to make money out of thin air, would you need bank ? Yes, Jekyll doesn’t need database.&lt;/p&gt;
+
+&lt;p&gt;On the contrary to convenience, the performance of Jekyll website is going to be lower than a normal website with identical scale. The more files the server has, the lower it will be. Because it traverses &lt;strong&gt;all files&lt;/strong&gt; every time you request.&lt;/p&gt;
+
+&lt;p&gt;However, there are more fun matters on Jekyll waiting you and me to explore… I’ll update my blog as soon as I get more knowledge about it.&lt;/p&gt;
+
+&lt;h1 id=&quot;some-terrible-things-about-html&quot;&gt;2.  Some Terrible Things about HTML&lt;/h1&gt;
+
+&lt;p&gt;I don’t know it is the restriction of my poor low ability of HTML that matters, or the truth that this markup language is really terrible. During developing website, I always encounter problems failed to be explained with existing knowledge of what I’ve got. I don’t know whether it has a number of details not mentioned in w3schools’ tutorial. Whatever, I am going to look into its documentation and wish to have a huge change on my opinion.&lt;/p&gt;
+
+&lt;p&gt;Then, before I become a guru of HTML, I will post problems needed attention and valuable. There are several today:&lt;/p&gt;
+
+&lt;h3 id=&quot;how-a-img-tag-align-&quot;&gt;How a &amp;lt;img&amp;gt; tag align ?&lt;/h3&gt;
+
+&lt;p&gt;Maybe you don’t know. That’s because you never knock into it. When you put a &amp;lt;div&amp;gt; tag or others besides a image, you will see the problem. You are likely to see they are not aligned.&lt;/p&gt;
+
+&lt;p&gt;It is due to the mechanism img align —— it aligns to &lt;em&gt;the bottom of text in adjacent tags&lt;/em&gt; by default. You should put this into &amp;lt;img&amp;gt; tag’s style to make it aligned to the top:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nt&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;vertical-align&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;excess-space-between-inline-block-elements-&quot;&gt;Excess space between inline-block elements ?&lt;/h3&gt;
+
+&lt;p&gt;If you find inline-block element cannot butt up… Just like these:&lt;/p&gt;
+
+&lt;div style=&quot;display: inline-block;background-color: red;width: 50px;text-align: center;&quot;&gt;div_1&lt;/div&gt;
+&lt;div style=&quot;display: inline-block;background-color: red;width: 50px;text-align: center;&quot;&gt;div_2&lt;/div&gt;
+&lt;div style=&quot;display: inline-block;background-color: red;width: 50px;text-align: center;&quot;&gt;div_3&lt;/div&gt;
+
+&lt;p&gt;Don’t worry. There are two ways I’ve learned.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Switch into your html file,and then remove extra space between these tags.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Use negative margins…&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;margin-right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-4px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;And if you are blessed you’ll get:&lt;/p&gt;
+
+&lt;div style=&quot;display: inline-block;background-color: red;width: 50px;text-align: center;margin-right: -4px;&quot;&gt;div_1&lt;/div&gt;
+&lt;div style=&quot;display: inline-block;background-color: red;width: 50px;text-align: center;margin-right: -5px;&quot;&gt;div_2&lt;/div&gt;
+&lt;div style=&quot;display: inline-block;background-color: red;width: 50px;text-align: center;&quot;&gt;div_3&lt;/div&gt;
+
+&lt;p&gt;At this moment, take a deep breath. Don’t be too mad and speak aloud : “ Fuck HTML SHIT !!!!! “&lt;/p&gt;
+
+&lt;h3 id=&quot;let-long-words-wrap&quot;&gt;Let long words wrap&lt;/h3&gt;
+
+&lt;p&gt;If a word is tooooooooooooooooooooooooo long, it is not wrapped but overflows by default. The code snippet below works:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nf&quot;&gt;#container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;word-wrap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;break-word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;overflow-wrap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;break-word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;a-layout-and-its-implementation-in-pure-css&quot;&gt;3.  A layout and its implementation in pure CSS&lt;/h1&gt;
+
+&lt;p&gt;Now go back to homepage of my website, the layout you’ve seen is called &lt;em&gt;waterfall layout&lt;/em&gt; or &lt;em&gt;Pinterest like layout&lt;/em&gt;, etc. Tags are just like water flowing from top to bottom. This layout can be implemented PURELY by CSS ! An example:&lt;/p&gt;
+
+&lt;h3 id=&quot;html-file&quot;&gt;HTML file:&lt;/h3&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;container&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;item&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;item&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;item&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+  ...
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;item&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;css-file&quot;&gt;CSS file:&lt;/h3&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nc&quot;&gt;.container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;400px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;column-count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;-moz-column-count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;-webkit-column-count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;column-gap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;-moz-column-gap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;-webkit-column-gap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.item&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;text-decoration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The column property is the main point. However, it has some disadvantages:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Work only on tags with known number.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Each item is places from top to bottom in a column first, then from left to right.
+But if you just want to present some photos, it should be a decent idea.
+For more complex structure, I recommend you to use a JQuery plugin:&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;http://masonry.desandro.com&quot; title=&quot;Get the plugin&quot;&gt;&lt;strong&gt;Masonry&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;OK, that's enough today. I'll update soon with bags of bugs.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 05 Oct 2016 14:13:00 +0800</pubDate>
+        <link>https://andi-mckee.github.io//html/css/2016/10/05/jekyll-html-and-css.html</link>
+        <guid isPermaLink="true">https://andi-mckee.github.io//html/css/2016/10/05/jekyll-html-and-css.html</guid>
+        
+        
+        <category>html</category>
+        
+        <category>css</category>
+        
+      </item>
+    
+      <item>
+        <title>Finished...</title>
+        <description>&lt;p&gt;At last… I finished setting up my personal blog on web development.&lt;/p&gt;
+
+&lt;p&gt;But I have to sleep now…&lt;/p&gt;
+
+&lt;p&gt;Tomorrow I’ll write some essays about troubles I’ve encountered.&lt;/p&gt;
+
+&lt;p&gt;Good Night…&lt;/p&gt;
+
+&lt;p&gt;Ok, not tomorrow but today… So, happy National Day !&lt;/p&gt;
+
+&lt;p&gt;Fine.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 01 Oct 2016 02:54:00 +0800</pubDate>
+        <link>https://andi-mckee.github.io//journal/2016/10/01/finish.html</link>
+        <guid isPermaLink="true">https://andi-mckee.github.io//journal/2016/10/01/finish.html</guid>
+        
+        
+        <category>journal</category>
+        
+      </item>
+    
+      <item>
+        <title>Html and Css are just like SHIT !!!</title>
+        <description>&lt;p&gt;Being stuck to several html and css problems for hours, I got extremely mad.&lt;/p&gt;
+
+&lt;p&gt;What the Fuck these terrible mark-up languages are ?&lt;/p&gt;
+
+&lt;p&gt;I’ll write a blog on it later to represent what I said is deadly true…&lt;/p&gt;
+
+&lt;p&gt;FUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUCK !&lt;/p&gt;
+</description>
+        <pubDate>Fri, 30 Sep 2016 21:13:00 +0800</pubDate>
+        <link>https://andi-mckee.github.io//html/css/2016/09/30/html-and-css-are-just-like-shit.html</link>
+        <guid isPermaLink="true">https://andi-mckee.github.io//html/css/2016/09/30/html-and-css-are-just-like-shit.html</guid>
+        
+        
+        <category>html</category>
+        
+        <category>css</category>
+        
+      </item>
+    
+      <item>
+        <title>My first post with jekyll</title>
+        <description>&lt;p&gt;This is my first blog on web development.&lt;/p&gt;
+
+&lt;p&gt;And it is REALLY the first time that I have EVER tried jekyll.&lt;/p&gt;
+
+&lt;p&gt;To be honest, the documentation of jekyll is just like SHIT. At first, I supposed it my weakness in English which made me confused for a long time. However, after I switched the doc page into a Chinese one, I can hardly understand how to go through EITHER!!!&lt;/p&gt;
+
+&lt;p&gt;Now I am still working on how to make it…&lt;/p&gt;
+
+&lt;p&gt;Hope you guys follow me on &lt;a href=&quot;https://github.com/ANDI-Mckee&quot; title=&quot;ANDI-Mckee's Github&quot;&gt;github&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 30 Sep 2016 08:06:54 +0800</pubDate>
+        <link>https://andi-mckee.github.io//website/2016/09/30/my-first-post-with-jekyll.html</link>
+        <guid isPermaLink="true">https://andi-mckee.github.io//website/2016/09/30/my-first-post-with-jekyll.html</guid>
+        
+        
+        <category>website</category>
+        
+      </item>
+    
+  </channel>
+</rss>

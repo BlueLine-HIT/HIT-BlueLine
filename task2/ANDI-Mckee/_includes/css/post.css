@@ -1,0 +1,13 @@
+div.post-blog-wrapper {
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding: 5px 40px;
+    width: 900px;
+    background-color: #fcfcfc;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-shadow: 0 0 40px 2px #d8d8d8;
+    -moz-box-shadow: 0 0 40px 2px #d8d8d8;
+    -webkit-box-shadow: 0 0 40px 2px #d8d8d8;
+}
