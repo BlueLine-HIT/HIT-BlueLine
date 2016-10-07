@@ -1,0 +1,37 @@
+---
+layout: master-layout
+---
+
+<div class="index-excerpt-wrapper grid">
+  <!-- <div class="index-excerpt index-excerpt-photo grid-item">
+    <img src="/download/img/ukulele.png" class="index-excerpt-photo ukulele" alt="ukulele">
+  </div> -->
+  <div class="index-excerpt index-excerpt-video grid-item">
+    <h3 class="index-excerpt-video-heading">WATCH THIS <span style="font-weight:bold;font-style:italic;">HORRIBLE</span> &nbsp;VIDEO:</h3>
+    <video poster="/download/img/PPAP.jpg" width="100%" controls preload="auto" data-setup="{}">
+      <source src="PPAP.webm" type='video/webm'>
+      <source src="PPAP.mp4" type='video/mp4'>
+        <p>
+          Sorry, your browser doesn't support html5 video player.It is the time to update it.
+          <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+        </p>
+    </video>
+  </div>
+  {% for post in site.posts limit:10 %}
+  <div class="index-excerpt grid-item">
+    <a class="index-excerpt" href="{{ post.url | prepend: site.baseurl }}">
+      <header class="index-excerpt-header">{{ post.title | escape }}</header>
+      <span class="index-excerpt-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <div class="index-excerpt-content">{{ post.content | strip_html | truncatewords:160 | newline_to_br }}</div>
+    </a>
+  </div>{% endfor %}
+</div>
+
+<script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="/js/masonry.pkgd.min.js"></script>
+<script type="text/javascript">
+  $('.grid').masonry({
+    itemSelector: '.grid-item',
+    columnWidth: 450,
+  });
+</script>
