@@ -1,0 +1,178 @@
+@charset "utf-8";
+*{padding: 0;margin-top: 0;}
+	body{
+		background-color: #fff;
+		color: #555;
+		font-family: 'Avenir Next','Lantinghei SC';
+		font-size: 14px;
+		-webkit-font-smoothing:antialiased;
+		-moz-font-smoothing:antialiased;
+	}
+	.wrap{
+		width: 100%;
+		height: 600px;
+		position: absolute;
+		top: 50%;
+		margin-top: -700px;
+		background-color: #333;
+		overflow: hidden;
+		/*实现3D效果*/
+		-webkit-perspective:800px;
+		-moz-perspective:800px;
+	}
+	.photo{
+		width: 260px;
+		height: 320px;
+		position: absolute;
+		z-index: 1;
+		box-shadow: 0 0 1px rgba(0,0,0,.01);
+
+		-webkit-transition:all .6s;
+		-moz-transition:all .6s;
+	}
+	.photo .side{
+		width: 100%;
+		height: 100%;
+		background-color: #eee;
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 20px;
+		box-sizing: border-box;
+	}
+
+	.photo .side-front{
+
+	}
+	.photo .side-front .image{
+		width: 100%;
+		height: 250px;
+		line-height: 250px;
+		overflow: hidden;
+	}
+	.photo .side-front .image img{
+		width: 100%;
+
+	}
+	.photo .side-front .caption{
+		text-align: center;
+		font-size: 16px;
+		line-height: 50px;
+	}
+	.photo .side-back{
+		
+	}
+	.photo .side-back .desc{
+		color: #666;
+		font-size: 14px;
+		line-height: 1.5em;
+	}
+	.photo_center{
+		left: 50%;
+		top: 50%;
+		margin: -160px 0 0 -130px;
+		z-index: 999;
+	}
+	.photo_wrap{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+
+		-webkit-transform-style:preserve-3d;
+		-webkit-transition:all .6s;
+		-moz-transform-style:preserve-3d;
+		-moz-transition:all .6s;
+	}
+	.photo_wrap .side-front{
+		-webkit-transform:rotateY(0deg);
+		-moz-transform:rotateY(0deg);
+	}
+	.photo_wrap .side-back{
+		-webkit-transform:rotateY(180deg);
+		-moz-transform:rotateY(180deg);
+	}
+	.photo_wrap .side{
+		-webkit-backface-visibility:hidden;
+		-moz-backface-visibility:hidden;
+	}
+
+	.photo_front .photo_wrap{
+		-webkit-transform:rotateY(0deg);
+		-moz-transform:rotateY(0deg);
+	}
+	.photo_back .photo_wrap{
+		-webkit-transform:rotateY(180deg);
+		-moz-transform:rotateY(180deg);
+	}
+	/* 控制按钮的样式*/
+	@font-face{
+		font-family: 'icons';
+		src:url('icons.woff') format('woff');
+		font-weight: normal;
+		font-size:normal;
+	}
+/*加上控制按钮的样式*/
+	.nav{
+		width: 45%;
+		height: 40px;
+		line-height: 30px;
+		position: absolute;
+		left: 30%;
+		bottom: 20px;
+		z-index: 999;
+		background-color: #fff;
+		text-align: center;
+	}
+
+	.nav .i{
+		width: 40px;
+		height: 40px;
+		display: inline-block;
+		cursor: pointer;
+		background-color: #aaa;
+		text-align: center;
+		border-radius: 50px;
+
+		-webkit-transform:scale(.36);
+		-webkit-transition:all .5s;
+		-moz-transform:scale(.36);
+		-moz-transition:all .5s;
+	}
+	.nav .i:after{
+		content: "\e600";
+		font-family: "icons";
+		font-size: 80%;
+		line-height: 30px;
+		text-align: center;
+		color: #fff;
+		opacity: 0;
+	}
+	.nav .i_current{
+		-webkit-transform:scale(.64);
+		-moz-transform:scale(.64);
+	}
+	.nav .i_current:after{
+		opacity: 1;
+	}
+	.nav .i_back{
+		-webkit-transform:rotateY(-180deg);
+		-moz-transform:rotateY(-180deg);
+		background-color: #555;
+	}
+	.photo{
+		left: 50%;
+		top: 50%;
+		margin: -160px 0 0 -130px;
+	}
+	.photo_wrap{
+		-webkit-transform-origin:0% 50%;
+		-moz-transform-origin:0% 50%;
+	}
+	.photo_front .photo_wrap{
+		-webkit-transform:translate(0px,0px) rotateY(0deg);
+		-moz-transform:translate(0px,0px) rotateY(0deg);
+	}
+	.photo_back .photo_wrap{
+		-webkit-transform:translate(260px,0px) rotateY(180deg);
+		-moz-transform:translate(260px,0px) rotateY(180deg);
+	}

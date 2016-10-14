@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>林家璇个人主页</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="person">
+        <img src="image/person.png">
+    </div>
+       <div id="first" class="carousel slide" data-ride="carousel" data-interval="2000">
+           <ol class="carousel-indicators">
+               <li data-target="#first" data-slide-to="0" class="active"></li>
+               <li data-target="#first" data-slide-to="1"></li>
+               <li data-target="#first" data-slide-to="2"></li>
+           </ol>
+           <div class="carousel-inner" role="listbox">
+               <div class="item active">
+                   <img src="image/first.png" alt="第一张照片">
+               </div>
+               <div class="item">
+                   <img src="image/second.png" alt="第一张照片">
+               </div>
+               <div class="item">
+                   <img src="image/third.png" alt="第一张照片">
+               </div>
+           </div>
+           <a href="#first" class="left carousel-control" role="button" data-slide="prev">
+               <span class="glyphicon glyphicon-chevron-left"></span>
+               <span class="sr-only">Previous</span>
+           </a>
+           <a href="#first" class="right carousel-control" role="button" data-slide="next">
+               <span class="glyphicon glyphicon-chevron-right"></span>
+               <span class="sr-only">Next</span>
+           </a>
+       </div>
+       <div class="motto">
+          <img src="image/zuoyouming.png">
+       </div>
+       <div class="blank"></div>
+       <div class="details">
+          <div class="table" id="table">
+              <table class="table table-hover">
+                  <thead>
+                      <th width="50%">学习中遇到的问题</th>
+                      <th width="50%">解决方法</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>块状元素错位</td>
+                      <td>右键点击审查元素或检查检测模块信息</td>
+                    </tr>
+                    <tr>
+                      <td>li大小</td>
+                      <td>时刻关注上一级ul或ol，关注其宽度高度位置，然后调整li属性</td>
+                    </tr>
+                    <tr>
+                      <td>JavaScript获取元素</td>
+                      <td>仔细查看是查询id、className还是tagName，注意你的函数分别是
+                          getElementById,getElement<span>s</span>ByClassName,getElement<span>s</span>ByTagName</td>
+                    </tr>
+                    <tr>
+                      <td>javascript获取元素可读数组不可读单个元素</td>
+                      <td>注意加载顺序，JavaScript文件要在body后加载</td>
+                    </tr>
+                    <tr>
+                      <td>jQuery加载失败</td>
+                      <td>在console中查看是否有版本提示，注意要经常更新jQuery</td>
+                    </tr>
+                    <tr>
+                      <td>js或jq没有用</td>
+                      <td>查询console看是否有错误提示，如果没有，则查询代码逻辑是否有问题，可用console.log()打印语句辅助检查</td>
+                    </tr>
+                  </tbody>
+              </table>
+              <div class="quotation">
+                   <h2><b>个人语录</b></h2>
+                  <table class="table table-bordered">
+                      <tbody>
+                        <tr><td><i>只有想不到没有做不到</i></td></tr>
+                        <tr><td><i>你今天的所作所为决定了你的未来</i></td></tr>
+                        <tr><td><i>人活一世，怎能碌碌而去</i></td></tr>
+                        <tr><td><i>前进，或许很痛，或许很神伤，但那是最好的结局</i></td></tr>
+                        <tr><td><i>别人眼中的你只是一个缩影，只有自己眼中的自己才是真实的自我</i></td></tr>
+                        <tr><td><i>有时候，转身也不一定不是个好的结局<span class="glyphicon glyphicon-pushpin"></span></i></td></tr>
+                      </tbody>
+                  </table>
+              </div>
+              <table class="table" id="table_second">
+                  <thead>
+                      <th width="50%">今后学习计划内容</th>
+                      <th width="50%">时间</th>
+                  </thead>
+                  <tbody>
+                    <tr class="warning">
+                       <td>搭建自己的简易网站，并在日期截止后继续进行</td>
+                       <td>2016.10.7-2016.10.22</td>
+                    </tr>
+                    <tr class="success">
+                       <td>继续熟悉使用bootstrap</td>
+                       <td>2016.10.8-2016.10.31</td>
+                    </tr>
+                    <tr class="active">
+                       <td>学习JavaScript类与对象</td>
+                       <td>2016.10.20-***</td>
+                    </tr>
+                    <tr class="danger">
+                       <td>接触项目，在项目中学习</td>
+                       <td>2016.11.1-***</td>
+                    </tr>
+                    <tr class="success">
+                       <td>继续进行百度前端技术学院任务</td>
+                       <td>2016.10.22-***</td>
+                    </tr>
+                    <tr class="warning">
+                       <td>在学习过程中，自己做些小的项目</td>
+                       <td>2016.10.7-***</td>
+                    </tr>
+                  </tbody>
+              </table>
+          </div>
+       </div>
+       <div class="blank"></div>
+       <div class="study">
+          <img src="image/study.png">
+       </div>
+  </body>
+  <script type="text/javascript">
+      $('carousel').carousel()
+  </script>
+</html>

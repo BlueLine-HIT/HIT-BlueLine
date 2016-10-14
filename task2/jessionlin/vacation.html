@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>林家璇个人假期旅游</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/vacation.css" rel="stylesheet">
+    <link href="css/show.css" rel="stylesheet">
+  </head>
+<body>
+  <span class="b_title">冰雪大世界</span>
+<div class="display">
+  <div class="wrap" id="wrap">
+  <!-- 2.改写试图，为模板字符串 -->
+  <div class="photo  photo_front" onclick="turn(this)" id="photo_{{index}}">
+    <div class="photo_wrap">
+    <div class="side side-front">
+      <p class="image"><img src="image/{{img}}"></p>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+<!--其他活动展示-->
+        <div class="activties">
+            <div class="first_activity">
+              <img src="image/b3.png">
+                <div class="details">
+                    <h1><b>时间：2015.10.03</b></h1>
+                    <h1><i><b>地点：中央大街</b></i></h1>
+                    <h1><b>相关图片</b></h1>
+                    <div class="image_contained">
+                        <img src="image/activity4_1.png">
+                        <img src="image/activity4_2.png">
+                        <img src="image/activity4_3.png">
+                    </div>
+                </div>              
+            </div>
+            <div class="second_activity">
+              <img src="image/b4.png">
+                <div class="details">
+                    <h1><b>时间：2015.12.25</b></h1>
+                    <h1><i><b>地点：中央大街</b></i></h1>
+                    <h1><b>相关图片</b></h1>
+                    <div class="image_contained">
+                        <img src="image/activity5_1.png">
+                        <img src="image/activity5_2.png">
+                        <img src="image/activity5_3.png">
+                    </div>
+                </div>              
+            </div>
+            <div class="third_activity">
+              <img src="image/b6.png">
+                <div class="details">
+                    <h1><b>时间：2015某天</b></h1>
+                    <h1><i><b>地点：731部队遗址</b></i></h1>
+                    <h1><b>相关图片</b></h1>
+                    <div class="image_contained">
+                        <img src="image/activity6_1.png">
+                        <img src="image/activity6_2.png">
+                        <img src="image/activity6_3.png">
+                    </div>
+                </div>              
+            </div>
+        </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript" src="js/do.js"></script>
+</body>
+</html>

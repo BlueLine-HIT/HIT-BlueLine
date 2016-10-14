@@ -1,0 +1,35 @@
+﻿@charset "utf-8";
+.activity_1,.activity_2,.activity_3,.activity_4{
+	position: relative;
+	width: 45%;
+	left: 20px;
+	font-family: '隶书';
+	background-color: #D2E9FF;
+	height: 350px;
+}
+.activity_title,.activity_title_2,.activity_title_3,.activity_title_4{
+	font-size: 80px;
+	color: 	#FF5809;
+	position: relative;
+}
+.line{
+	width: 100%;
+	height: 1px;
+	background-color: white;
+	position: relative;
+	margin-top: -10px;
+}
+.activity_2,.activity_4{
+	margin-top: -350px;
+	margin-left: 950px;
+}
+.title{
+	width: 100%;
+	left: 20px;
+	text-align: center;
+	font-family: '隶书';
+	font-size: 120px;
+}
+.activity_3{
+	margin-top: 15px;
+}

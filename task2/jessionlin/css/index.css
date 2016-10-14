@@ -1,0 +1,67 @@
+﻿@charset "utf-8";
+body{
+	padding: 70px;
+}
+#first{
+/*	padding-top: 20px;*/
+	width: 1200px;
+	position: relative;
+	margin-left: 310px;
+	margin-top: -550px;
+	float: left;
+}
+.motto{
+	position: relative;
+	float: left;
+	margin-top: -590px;
+	margin-left: 1540px;
+}
+.person{
+	margin-top: 20px;
+	width: 300px;
+	position: relative;
+	height: auto;
+}
+.study{
+	width: 1900px;
+	position: absolute;
+	top: 1030px;
+}
+#table{
+	width: 600px;
+	height: auto;
+}
+#table span{
+	color: red;
+}
+.blank{
+	height: 5px;
+}
+#table_second{
+	width: 600px;
+	height: auto;
+	position: absolute;
+	left: 1220px;
+	top: 0px;
+}
+.details{
+	width: 1850px;
+	height: auto;
+	overflow: hidden;
+	position: absolute;
+/*	margin-top: 627px;*/
+}
+.quotation{
+	width: 580px;
+	height: auto;
+	position: absolute;
+	left: 620px;
+	top: -22px;
+}
+.quotation b{
+	color:#7D7DFF;
+}
+.quotation .table i{
+	color: #2894FF;
+	font-size: 20px;
+}
