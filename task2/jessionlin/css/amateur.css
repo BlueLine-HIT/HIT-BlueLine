@@ -1,0 +1,30 @@
+@charset "utf-8";
+body{
+	padding: 70px;
+}
+#first{
+	width: 1200px;
+	position: relative;
+	margin-left: 300px;
+	overflow: hidden;
+}
+.blank{
+	height: 8px;
+}
+.activity{
+	width: 1800px;
+	position: absolute;
+	left: 10px;
+	height: auto;
+}
+.activity .corporation_activity span,
+.activity .class_activity span{
+	font-size: 45px;
+	font-family: '隶书';
+}
+.activity .class_activity{
+	position: absolute;
+	width: 600px;
+	left: 1200px;
+	top: 0;
+}

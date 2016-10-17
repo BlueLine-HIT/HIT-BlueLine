@@ -1,0 +1,31 @@
+@charset "utf-8";
+body{
+	padding: 10px;
+}
+.b_title{
+	font-size: 120px;
+	font-family: '隶书';
+	color: red;
+	position: absolute;
+	left: 600px;
+}
+.activties{
+	width: 1920px;
+	position: absolute;
+	margin-top: 800px;
+}
+.activties .first_activity{
+	width: 600px;
+	position: absolute;
+	left: 20px;
+}
+.activties .second_activity{
+	width: 600px;
+	position: absolute;
+	left: 640px;
+}
+.activties .third_activity{
+	width: 600px;
+	position: absolute;
+	left: 1260px;
+}

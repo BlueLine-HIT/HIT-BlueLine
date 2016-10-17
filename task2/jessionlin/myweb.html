@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>林家璇个人主页</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation"><!--可用navbar-inverse使导航条显示为黑色navbar-default navbar-fixed-top-->
+    	<div class="container">
+    		<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">个人主页</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="index.html" class="navbar-brand" target="mainFrame">个人主页</a>
+    		</div>
+    		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    			<ul class="nav navbar-nav">
+    				<li class="ifcheck" onclick="add(0)"><a href="index.html" target="mainFrame">个人基本信息</a></li>
+    				<li class="dropdown ifcheck" onclick="add(1)"><a href="#" class="dropdown-toggle" data-toggle="dropdown">业余生活<span class="caret"></span></a>
+						<ul class="dropdown-menu second" role="menu">
+							<li class="ifcheck_1" onclick="add1(0)"><a href="amateur.html" target="mainFrame">课外娱乐</a></li>
+							<li class="divider"></li>
+							<li class="ifcheck_1" onclick="add1(1)"><a href="vacation.html" target="mainFrame">假期旅游</a></li>
+						</ul>
+    				</li>
+    				<li class="ifcheck" onclick="add(2)"><a href="hometown.html" target="mainFrame">家乡背景</a></li>
+    				<li class="ifcheck" onclick="add(3)"><a href="hobby.html" target="mainFrame">个人喜好</a></li>
+    			</ul>
+    		</div>
+    	</div>
+    </nav>
+    <iframe src="index.html"  frameborder="0" name="mainFrame" width="100%" height="1700"></iframe>
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/myweb.js"></script>
+  </body>
+</html>
