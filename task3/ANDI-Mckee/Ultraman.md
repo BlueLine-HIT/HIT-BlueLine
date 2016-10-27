@@ -4,8 +4,9 @@
 
 ![Ultraman][1]
 
-|     Genre     |          Superhero Science fiction Action Adventure          |
+|   Something   |                      About Our Hero !!!                      |
 |:-------------:|:------------------------------------------------------------:|
+|     Genre     |          Superhero Science fiction Action Adventure          |
 |   Created by  |                        Eiji Tsuburaya                        |
 |   Written by  | Tetsuo Kinjō Masahiro Yamada Mamoru Sasaki Shinichi Sekizawa |
 | Opening theme |       "Song of Ultraman" by the Misuzu Children's Choir      |
