@@ -1,0 +1,3 @@
+[submodule "task2/ANDI-Mckee"]
+	path = task2/ANDI-Mckee
+	url = git@github.com:ANDI-Mckee/ANDI-Mckee.github.io.git
