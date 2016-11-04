@@ -1,4 +1,4 @@
-# Ultraman
+# Ultraman:sparkles::sparkles::sparkles:
 - - - - -
 *Copied from wikipedia,the free encyclopedia*
 
